@@ -12,7 +12,7 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class Training {
 	
-	
+	//This is a taring project
 	WebDriver driver=new EdgeDriver();
 	
 	String WebSite="https://www.saucedemo.com/";
