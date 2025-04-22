@@ -18,15 +18,14 @@ public class Training {
 	String WebSite="https://www.saucedemo.com/";
 	String UserName="standard_user";
 	String PassWord="secret_sauce";
-		
+	List<WebElement> ItemName=driver.findElements(By.className("inventory_item_name"));
 	
 	@BeforeTest
 	
 	public void MySetup() {
 		
 		driver.manage().window().maximize();
-		driver.get(WebSite);
-		
+		driver.get(WebSite);		
 		
 	}
 	
@@ -119,7 +118,7 @@ public class Training {
 	
 	@Test (priority=11, enabled=true)
 	public void PrintLableNotEndWithT() {
-		List<WebElement> ItemName=driver.findElements(By.className("inventory_item_name"));
+		
 		for(int i=0; i<ItemName.size();i++) {
 		String ItemsName=ItemName.get(i).getText();
 		if(ItemsName.endsWith("t"))
