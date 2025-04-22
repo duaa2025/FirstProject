@@ -19,12 +19,15 @@ public void MySetup() {
 
 
 @Test
-public void FillTheLoginPage() {
+public void FillTheLoginPage() throws InterruptedException {
 	WebElement Username= driver.findElement(By.name("username"));
 	Username.sendKeys("duaa2020");
+	Thread.sleep(2000);
 	WebElement Password= driver.findElement(By.xpath("//input[@id='password']"));
 	Password.sendKeys("1465765");
-	WebElement Button= driver.findElement(By.xpath("//button[@class='login-btn']"));
+	Thread.sleep(2000);
+	//WebElement Button= driver.findElement(By.xpath("//button[@class='login-btn']"));
+	WebElement Button= driver.findElement(By.cssSelector("login-btn"));
 	Button.click();
 			
 	
